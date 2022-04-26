@@ -4,7 +4,11 @@ import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import Link from "./components/link";
 
-function App() {
+/**
+ * @component App, the main component
+ * @returns {JSX.Element}
+ */
+function App(): JSX.Element {
   const [isLoading, setLoading] = useState(true);
   const container = useRef<HTMLDivElement>(null);
   const loader = useRef<HTMLDivElement>(null);
@@ -34,7 +38,8 @@ function App() {
                     <div className='relative w-full h-2.5 rounded-full bg-slate-900'>
                       <div
                         className=' w-0 h-2.5 rounded-full bg-slate-50'
-                        ref={loader}></div>
+                        ref={loader}
+                      />
                       <p className='text-center text-white'>78%</p>
                     </div>
                   </div>
@@ -48,16 +53,16 @@ function App() {
           <div className='m-4 flex justify-between items-center'>
             <div className='w-32 h-12 logo'></div>
             <div className='p-4'>
-              <Link to='' className='link'>
+              <Link to='' c='link'>
                 Home
               </Link>
-              <Link to='#About' className='link'>
+              <Link to='#About' c='link'>
                 About
               </Link>
-              <Link to='#Projects' className='link'>
+              <Link to='#Projects' c='link'>
                 Projects
               </Link>
-              <Link to='#Contact' className='link'>
+              <Link to='#Contact' c='link'>
                 Contact
               </Link>
             </div>
@@ -73,7 +78,7 @@ function App() {
               </svg>
             </div>
           </div>
-          <div className='content'></div>
+          <div className='content' />
         </div>
       )}
     </div>

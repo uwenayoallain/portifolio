@@ -1,14 +1,18 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-const Cursor = () => {
+/**
+ * @function Cursor, a function  for a custom cursor
+ * @returns {JSX.Element}
+ */
+function Cursor(): JSX.Element {
   const cursor = useRef<HTMLDivElement>(null);
   const cursorInner = useRef<HTMLDivElement>(null);
   const handleCursorMove = (e: any) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
     gsap.to(cursor.current, {
-      x: mouseX + cursorInner.current!.offsetWidth*2,
-      y: mouseY + cursorInner.current!.offsetHeight*2,
+      x: mouseX + cursorInner.current!.offsetWidth * 2,
+      y: mouseY + cursorInner.current!.offsetHeight * 2,
       duration: 0.5,
       ease: "power3.ease",
     });
@@ -44,12 +48,14 @@ const Cursor = () => {
     <>
       <div
         className='absolute pointer-events-none z-50 w-10 h-10 border-2 rounded-full -top-9 -left-9 border-slate-900 dark:border-white'
-        ref={cursor}></div>
+        ref={cursor}
+      />
       <div
         className='absolute pointer-events-none z-50 w-2 h-2 rounded-full -top-5 -left-5 bg-slate-900 dark:bg-white'
-        ref={cursorInner}></div>
+        ref={cursorInner}
+      />
     </>
   );
-};
+}
 
 export default Cursor;
