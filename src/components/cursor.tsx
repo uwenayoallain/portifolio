@@ -7,7 +7,7 @@ import gsap from "gsap";
 function Cursor(): JSX.Element {
   const cursor = useRef<HTMLDivElement>(null);
   const cursorInner = useRef<HTMLDivElement>(null);
-  const handleCursorMove = (e: any) => {
+  const handleCursorMove = (e: MouseEvent) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
     gsap.to(cursor.current, {

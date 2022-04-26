@@ -19,7 +19,7 @@ function App(): JSX.Element {
       ease: "power3.easeOut",
       onComplete: () => {
         setLoading(false);
-        container.current!.classList.remove("dark");
+        container.current?.classList.remove("dark");
       },
     });
   }, [loader]);

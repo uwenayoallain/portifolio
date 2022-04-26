@@ -11,7 +11,7 @@ function Link({
   c,
 }: {
   to: string;
-  children: any;
+  children: React.ReactNode;
   c: string;
 }): JSX.Element {
   return (
