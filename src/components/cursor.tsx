@@ -7,6 +7,11 @@ import gsap from "gsap";
 function Cursor(): JSX.Element {
   const cursor = React.useRef<HTMLDivElement>(null);
   const cursorInner = React.useRef<HTMLDivElement>(null);
+
+  /**
+   * @function handleCursorMove, a function for moving the custom cursor
+   * @param e MouseEvent, the event to use
+   */
   const handleCursorMove = (e: MouseEvent) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;

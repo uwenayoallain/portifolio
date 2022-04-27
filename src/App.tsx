@@ -3,6 +3,7 @@ import Cursor from "./components/cursor";
 import React from "react";
 import gsap from "gsap";
 import Link from "./components/link";
+import { randomInRange } from "./utils/utils";
 
 /**
  * @component App, the main component
@@ -12,12 +13,10 @@ function App(): JSX.Element {
   const [isLoading, setLoading] = React.useState(true);
   const container = React.useRef<HTMLDivElement>(null);
   const loader = React.useRef<HTMLDivElement>(null);
-  const [indicator, setIndicator] = React.useState(0);
   React.useEffect(() => {
-    setIndicator(10);
     gsap.to(loader.current, {
       width: "100%",
-      duration: 5,
+      duration: randomInRange(3, 6),
       ease: "power3.easeOut",
       onComplete: () => {
         setLoading(false);
@@ -42,11 +41,8 @@ function App(): JSX.Element {
                       <div
                         className=' w-0 h-2.5 rounded-full bg-slate-50'
                         ref={loader}
-                        data-value={indicator}
                       />
-                      <p className='text-center text-white'>
-                        {loader.current?.getAttribute("data-value")}%
-                      </p>
+                      <p className='text-center text-white'>10%</p>
                     </div>
                   </div>
                 </div>
@@ -88,10 +84,20 @@ function App(): JSX.Element {
             <div className='flex w-full'>
               <div className='w-1/2 h-screen flex items-center flex-wrap'>
                 <div className='w-full'>
-                  <h1 className='text-[#3730A3] text-2xl text-center'>
+                  <h2 className='text-[#3730A3] text-2xl text-center'>
                     uwenayoallain
+                  </h2>
+                  <h1 className='text-center text-3xl font-[Pally-Bold]'>
+                    UWENAYO Alain Pacifique
                   </h1>
-                  <h1 className='text-center '>Web Developer & Designer</h1>
+                  <p className='text-center bg-red-900 w-4/6 my-4 mx-auto'>
+                    I am a Web{" "}
+                    <span className='text-[#3730A3] italic'>
+                      Developer & Designer
+                    </span>{" "}
+                    based in Rwanda 🇷🇼.curently learning new web technologies
+                    and building awesome web applications.
+                  </p>
                 </div>
               </div>
             </div>

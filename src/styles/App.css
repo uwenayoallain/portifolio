@@ -19,11 +19,11 @@
 .link-hover:hover {
   @apply text-orange-500;
 }
-.link-hover:before {
+.link-hover:before{
   @apply text-transparent absolute left-1 pointer-events-none top-1/2 transform -translate-x-1/2 -translate-y-1/2;
   content: attr(data-text);
 }
-.link-hover:hover:before {
+.link-hover:hover:before{
   @apply text-orange-500 left-1/2  transition-all ease-in-out duration-200;
 }
 .link-hover:after {
