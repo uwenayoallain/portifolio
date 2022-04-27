@@ -2,7 +2,7 @@ import "./styles/App.css";
 import Cursor from "./components/cursor";
 import React from "react";
 import gsap from "gsap";
-import Link from "./components/link";
+import Link, { Button } from "./components/link";
 import { randomInRange } from "./utils/utils";
 
 /**
@@ -68,17 +68,19 @@ function App(): JSX.Element {
                 Contact
               </Link>
             </div>
-            <div className='p-6 rounded-full bg-slate-200'>
+            {/* <div className='p-6 rounded-full bg-slate-200'> */}
+            <Button>
               <svg
                 width='36'
                 height='36'
                 viewBox='0 0 36 36'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'>
-                <rect y='12' width='36' height='6' rx='5' fill='#0F172A' />
-                <rect y='24' width='36' height='6' rx='5' fill='#0F172A' />
+                <rect y='12' width='36' height='6' rx='5' fill='currentColor' />
+                <rect y='24' width='36' height='6' rx='5' fill='currentColor' />
               </svg>
-            </div>
+            </Button>
+            {/* </div> */}
           </div>
           <div className='content absolute top-0 w-full -z-[1]'>
             <div className='flex w-full'>
@@ -90,14 +92,18 @@ function App(): JSX.Element {
                   <h1 className='text-center text-3xl font-[Pally-Bold]'>
                     UWENAYO Alain Pacifique
                   </h1>
-                  <p className='text-center bg-red-900 w-4/6 my-4 mx-auto'>
+                  <p className='text-center text-lg w-4/6 my-4 mx-auto'>
                     I am a Web{" "}
                     <span className='text-[#3730A3] italic'>
                       Developer & Designer
-                    </span>{" "}
-                    based in Rwanda 🇷🇼.curently learning new web technologies
+                    </span>
+                    {"  "}
+                    based in Rwanda 🇷🇼.currently learning new web technologies
                     and building awesome web applications.
                   </p>
+                  <div className='w-max mx-auto'>
+                    <Button>View CV</Button>
+                  </div>
                 </div>
               </div>
             </div>

@@ -8,6 +8,26 @@ function Cursor(): JSX.Element {
   const cursor = React.useRef<HTMLDivElement>(null);
   const cursorInner = React.useRef<HTMLDivElement>(null);
 
+  const hideCursor = (
+    outercursor: HTMLDivElement,
+    innercursor: HTMLDivElement
+  ) => {
+    gsap.to([outercursor, innercursor], {
+      opacity: 0,
+      duration: 0.1,
+      ease: "power3.ease",
+    });
+  };
+  const showCursor = (
+    outercursor: HTMLDivElement,
+    innercursor: HTMLDivElement
+  ) => {
+    gsap.to([innercursor, outercursor], {
+      opacity: 1,
+      duration: 0.1,
+      ease: "power3.ease",
+    });
+  };
   /**
    * @function handleCursorMove, a function for moving the custom cursor
    * @param e MouseEvent, the event to use
@@ -33,39 +53,23 @@ function Cursor(): JSX.Element {
   React.useEffect(() => {
     const links = document.querySelectorAll(".link");
     links.forEach((link) => {
-      link.addEventListener("mouseenter", () => {
-        gsap.to([cursor.current, cursorInner.current], {
-          opacity: 0,
-          duration: 0.1,
-          ease: "power3.ease",
-        });
-      });
-      link.addEventListener("mouseleave", () => {
-        gsap.to([cursor.current, cursorInner.current], {
-          opacity: 1,
-          duration: 0.1,
-          ease: "power3.ease",
-        });
-      });
+      link.addEventListener("mouseenter", () =>
+        hideCursor(cursor.current!, cursorInner.current!)
+      );
+      link.addEventListener("mouseleave", () =>
+        showCursor(cursor.current!, cursorInner.current!)
+      );
     });
   });
 
   React.useEffect(() => {
     document.querySelectorAll(".button").forEach((button) => {
-      button.addEventListener("mouseenter", () => {
-        gsap.to(cursor.current, {
-          scale: 2,
-          duration: 0.1,
-          ease: "power3.ease",
-        });
-      });
-      button.addEventListener("mouseleave", () => {
-        gsap.to(cursor.current, {
-          scale: 1,
-          duration: 0.1,
-          ease: "power3.ease",
-        });
-      });
+      button.addEventListener("mouseenter", () =>
+        hideCursor(cursor.current!, cursorInner.current!)
+      );
+      button.addEventListener("mouseleave", () =>
+        showCursor(cursor.current!, cursorInner.current!)
+      );
     });
   });
   return (
