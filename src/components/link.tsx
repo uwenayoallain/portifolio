@@ -25,10 +25,17 @@ function Link({
   );
 }
 
-function Button({ children }: { children: React.ReactNode }): JSX.Element {
+function Button({
+  children,
+  c = "",
+}: {
+  children: React.ReactNode;
+  c?: string;
+}): JSX.Element {
   return (
     <div className='inline-block relative'>
-      <button className='p-8 text-lg bg-slate-900 text-white aspect-square rounded-full button overflow-hidden relative z-[1]'>
+      <button
+        className={`p-8 text-lg bg-slate-900 text-white aspect-square rounded-full button overflow-hidden relative z-[1] ${c}`}>
         {children}
       </button>
     </div>
