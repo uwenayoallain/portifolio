@@ -4,6 +4,7 @@ import React from "react";
 import gsap from "gsap";
 import Link, { Button } from "./components/link";
 import { randomInRange } from "./utils/utils";
+import image from "./images/yarison.png";
 
 /**
  * @component App, the main component
@@ -104,6 +105,11 @@ function App(): JSX.Element {
                   <div className='w-max mx-auto'>
                     <Button>View CV</Button>
                   </div>
+                </div>
+              </div>
+              <div className='w-1/2 h-screen flex items-center flex-wrap mershed-background'>
+                <div className='w-1/2 m-auto'>
+                  <img src={image} alt={"Yarison | alain's profile picture"} />
                 </div>
               </div>
             </div>
