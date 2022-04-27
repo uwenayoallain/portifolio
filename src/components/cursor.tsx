@@ -44,6 +44,25 @@ function Cursor(): JSX.Element {
       });
     });
   });
+
+  useEffect(() => {
+    document.querySelectorAll(".button").forEach((button) => {
+      button.addEventListener("mouseenter", () => {
+        gsap.to(cursor.current, {
+          scale: 2,
+          duration: 0.1,
+          ease: "power3.ease",
+        });
+      });
+      button.addEventListener("mouseleave", () => {
+        gsap.to(cursor.current, {
+          scale: 1,
+          duration: 0.1,
+          ease: "power3.ease",
+        });
+      });
+    });
+  });
   return (
     <>
       <div

@@ -1,6 +1,6 @@
 import "./styles/App.css";
 import Cursor from "./components/cursor";
-import { useState, useEffect, useRef } from "react";
+import React from "react";
 import gsap from "gsap";
 import Link from "./components/link";
 
@@ -9,10 +9,10 @@ import Link from "./components/link";
  * @returns {JSX.Element}
  */
 function App(): JSX.Element {
-  const [isLoading, setLoading] = useState(true);
-  const container = useRef<HTMLDivElement>(null);
-  const loader = useRef<HTMLDivElement>(null);
-  useEffect(() => {
+  const [isLoading, setLoading] = React.useState(true);
+  const container = React.useRef<HTMLDivElement>(null);
+  const loader = React.useRef<HTMLDivElement>(null);
+  React.useEffect(() => {
     gsap.to(loader.current, {
       width: "100%",
       duration: 5,
@@ -78,7 +78,18 @@ function App(): JSX.Element {
               </svg>
             </div>
           </div>
-          <div className='content' />
+          <div className='content absolute top-0 w-full'>
+            <div className='flex w-full'>
+              <div className='w-1/2 h-screen flex items-center flex-wrap'>
+                <div className='w-full'>
+                  <h1 className='text-[#3730A3] text-2xl text-center'>
+                    uwenayoallain
+                  </h1>
+                  <h1 className='text-center '>Web Developer & Designer</h1>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </div>
