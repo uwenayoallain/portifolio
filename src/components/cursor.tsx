@@ -1,12 +1,12 @@
-import { useEffect, useRef } from "react";
+import React from "react";
 import gsap from "gsap";
 /**
  * @function Cursor, a function  for a custom cursor
  * @returns {JSX.Element}
  */
 function Cursor(): JSX.Element {
-  const cursor = useRef<HTMLDivElement>(null);
-  const cursorInner = useRef<HTMLDivElement>(null);
+  const cursor = React.useRef<HTMLDivElement>(null);
+  const cursorInner = React.useRef<HTMLDivElement>(null);
   const handleCursorMove = (e: MouseEvent) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
@@ -21,12 +21,12 @@ function Cursor(): JSX.Element {
       y: mouseY + cursorInner.current!.offsetHeight * 2,
     });
   };
-  useEffect(() => {
+  React.useEffect(() => {
     document.addEventListener("mousemove", (e) => handleCursorMove(e));
   }, []);
 
-  useEffect(() => {
-    const links = document.querySelectorAll("a");
+  React.useEffect(() => {
+    const links = document.querySelectorAll(".link");
     links.forEach((link) => {
       link.addEventListener("mouseenter", () => {
         gsap.to([cursor.current, cursorInner.current], {
@@ -45,7 +45,7 @@ function Cursor(): JSX.Element {
     });
   });
 
-  useEffect(() => {
+  React.useEffect(() => {
     document.querySelectorAll(".button").forEach((button) => {
       button.addEventListener("mouseenter", () => {
         gsap.to(cursor.current, {

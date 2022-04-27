@@ -12,7 +12,9 @@ function App(): JSX.Element {
   const [isLoading, setLoading] = React.useState(true);
   const container = React.useRef<HTMLDivElement>(null);
   const loader = React.useRef<HTMLDivElement>(null);
+  const [indicator, setIndicator] = React.useState(0);
   React.useEffect(() => {
+    setIndicator(10);
     gsap.to(loader.current, {
       width: "100%",
       duration: 5,
@@ -22,7 +24,8 @@ function App(): JSX.Element {
         container.current?.classList.remove("dark");
       },
     });
-  }, [loader]);
+    return () => {};
+  }, []);
   return (
     <div className='app dark' ref={container}>
       <Cursor />
@@ -39,8 +42,11 @@ function App(): JSX.Element {
                       <div
                         className=' w-0 h-2.5 rounded-full bg-slate-50'
                         ref={loader}
+                        data-value={indicator}
                       />
-                      <p className='text-center text-white'>78%</p>
+                      <p className='text-center text-white'>
+                        {loader.current?.getAttribute("data-value")}%
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -78,7 +84,7 @@ function App(): JSX.Element {
               </svg>
             </div>
           </div>
-          <div className='content absolute top-0 w-full'>
+          <div className='content absolute top-0 w-full -z-[1]'>
             <div className='flex w-full'>
               <div className='w-1/2 h-screen flex items-center flex-wrap'>
                 <div className='w-full'>
