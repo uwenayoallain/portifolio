@@ -53,7 +53,7 @@ function App(): JSX.Element {
       ) : (
         <div>
           <div className='m-4 flex justify-between items-center'>
-            <div className='w-32 h-12 logo'></div>
+            <div className='w-32 h-12 logo' />
             <div className='p-4'>
               <Link to='' c='link'>
                 Home
