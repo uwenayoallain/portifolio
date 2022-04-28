@@ -27,10 +27,10 @@
   content: attr(data-text);
 }
 .link-hover:hover:before {
-  @apply text-[#3730A3] left-1/2  transition-all ease-in-out duration-200;
+  @apply text-[#3730A3] left-1/2  transition ease-in-out duration-200;
 }
 .link-hover:after {
-  @apply absolute w-2 aspect-square rounded-full bg-transparent top-1/2 right-4 transform -translate-y-1/2 transition-all ease-in-out;
+  @apply absolute w-2 aspect-square rounded-full bg-transparent top-1/2 right-4 transform -translate-y-1/2 transition ease-in-out;
   content: "";
 }
 .link-hover:hover:after {
@@ -39,6 +39,18 @@
 .button:before {
   @apply bg-[#3730A3] absolute left-1/2 pointer-events-none top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-0 aspect-square rounded-full -z-[1];
   content: "";
+}
+
+.span {
+  @apply text-[#3730A3] font-bold;
+}
+.span:before {
+  content: "[";
+  @apply text-current mx-2;
+}
+.span:after{
+  content: "]";
+  @apply text-current mx-2;
 }
 
 .button:hover:before {

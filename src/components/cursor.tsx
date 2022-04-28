@@ -33,8 +33,8 @@ function Cursor(): JSX.Element {
    * @param e MouseEvent, the event to use
    */
   const handleCursorMove = (e: MouseEvent) => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
+    const mouseX = e.pageX;
+    const mouseY = e.pageY;
     gsap.to(cursor.current, {
       x: mouseX + cursorInner.current!.offsetWidth * 2,
       y: mouseY + cursorInner.current!.offsetHeight * 2,
