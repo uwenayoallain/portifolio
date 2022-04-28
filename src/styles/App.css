@@ -48,7 +48,7 @@
   content: "[";
   @apply text-current mx-2;
 }
-.span:after{
+.span:after {
   content: "]";
   @apply text-current mx-2;
 }
