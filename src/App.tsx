@@ -14,7 +14,11 @@ function App(): JSX.Element {
   const [isLoading, setLoading] = React.useState(true);
   const container = React.useRef<HTMLDivElement>(null);
   const loader = React.useRef<HTMLDivElement>(null);
-  const handleLoading = () => {
+  /**
+   * @function handleLoad, a function to handle the load event
+   * @returns {void}
+   */
+  const handleLoading = (): void => {
     setTimeout(() => {
       setLoading(false);
     }, randomInRange(3000, 5000));

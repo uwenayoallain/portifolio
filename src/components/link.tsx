@@ -25,6 +25,12 @@ function Link({
   );
 }
 
+/**
+ * @component Button, custom buttons
+ * @param children , the text to display in the button,
+ * @optional c, the class to apply to the button
+ * @returns {JSX.Element}
+ */
 function Button({
   children,
   c = " ",
