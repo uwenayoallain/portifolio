@@ -8,6 +8,11 @@ function Cursor(): JSX.Element {
   const cursor = React.useRef<HTMLDivElement>(null);
   const cursorInner = React.useRef<HTMLDivElement>(null);
 
+  /**
+   * @function  hideCursor, a function to hide the cursor
+   * @param outercursor HTMLDivElement, the outer cursor
+   * @param innercursor HTMLDivElement, the inner cursor
+   */
   const hideCursor = (
     outercursor: HTMLDivElement,
     innercursor: HTMLDivElement
@@ -18,6 +23,11 @@ function Cursor(): JSX.Element {
       ease: "power3.ease",
     });
   };
+  /**
+   * @function showCursor, a function to show the cursor
+   * @param outercursor HTMLDivElement, the outer cursor
+   * @param innercursor HTMLDivElement, the inner cursor
+   */
   const showCursor = (
     outercursor: HTMLDivElement,
     innercursor: HTMLDivElement

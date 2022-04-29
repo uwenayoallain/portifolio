@@ -2,7 +2,7 @@ import "./styles/App.css";
 import Cursor from "./components/cursor";
 import React from "react";
 import gsap from "gsap";
-import Link, { Button } from "./components/link";
+import { Link, Button } from "./components/link";
 import { randomInRange } from "./utils/utils";
 import image from "./images/yarison.png";
 
@@ -33,7 +33,7 @@ function App(): JSX.Element {
         container.current?.classList.remove("dark");
       },
     });
-    return () => {};
+    return;
   }, []);
   return (
     <div className='app dark' ref={container}>

@@ -27,7 +27,7 @@ function Link({
 
 function Button({
   children,
-  c = "",
+  c = " ",
 }: {
   children: React.ReactNode;
   c?: string;
@@ -35,6 +35,7 @@ function Button({
   return (
     <div className='inline-block relative'>
       <button
+        type='button'
         className={`p-8 text-lg bg-slate-900 text-white aspect-square rounded-full button overflow-hidden relative z-[1] ${c}`}>
         {children}
       </button>
@@ -42,5 +43,4 @@ function Button({
   );
 }
 
-export default Link;
-export { Button };
+export { Link, Button };
