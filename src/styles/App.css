@@ -1,3 +1,14 @@
+.marquee {
+  @apply ml-2;
+}
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100%, 0);
+  }
+}
 .centered {
   @apply flex items-center justify-center;
 }

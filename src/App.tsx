@@ -14,7 +14,6 @@ function App(): JSX.Element {
   const [isLoading, setLoading] = React.useState(true);
   const container = React.useRef<HTMLDivElement>(null);
   const loader = React.useRef<HTMLDivElement>(null);
-  const marquee = React.useRef<HTMLDivElement>(null);
   /**
    * @function handleLoad, a function to handle the load event
    * @returns {void}
@@ -24,17 +23,7 @@ function App(): JSX.Element {
       setLoading(false);
     }, randomInRange(3000, 5000));
   };
-  React.useEffect(() => {
-    gsap.to(marquee.current, {
-      duration: 5,
-      ease: "none",
-      x: "+=500",
-      modifiers: {
-        x: (x) => x % 500,
-      },
-      repeat: -1,
-    });
-  }, []);
+
   React.useEffect(() => {
     window.addEventListener("load", handleLoading);
     gsap.to(loader.current, {
@@ -165,16 +154,7 @@ function App(): JSX.Element {
                   own websites.{" "}
                 </h1>
               </div>
-              <div className='w-1/2 p-2'>
-                <div className='w-full bg-slate-100 rounded-full relative'>
-                  <h1
-                    className='text-6xl font-[Pally-Bold] bg-red-600 w-full absolute left-0'
-                    ref={marquee}>
-                    SERVICES SERVICES
-                  </h1>
-                  <h1 className='text-6xl font-[Pally-Bold]'>SERVICES</h1>
-                </div>
-              </div>
+              <div className='w-1/2 p-2 bg-red-700'></div>
             </div>
           </div>
         </div>
