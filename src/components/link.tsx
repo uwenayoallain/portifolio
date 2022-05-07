@@ -34,13 +34,16 @@ function Link({
 function Button({
   children,
   c = " ",
+  ...props
 }: {
   children: React.ReactNode;
   c?: string;
+  [key: string]: any;
 }): JSX.Element {
   return (
     <div className='inline-block relative'>
       <button
+        {...props}
         type='button'
         className={`p-8 text-lg bg-slate-900 text-white aspect-square rounded-full button overflow-hidden relative z-[1] ${c}`}>
         {children}

@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { Link, Button } from "./components/link";
 import { randomInRange } from "./utils/utils";
 import image from "./images/yarison.png";
+import useHover from "./components/useHover";
 
 /**
  * @component App, the main component
@@ -41,7 +42,8 @@ function App(): JSX.Element {
     <div className='app dark' ref={container}>
       <Cursor />
       {isLoading ? (
-        <div className='w-full h-screen bg-[#0F172A] centered'>
+        <div
+          className='w-full h-screen bg-[#0F172A] centered'>
           <div className='w-2/5 h-screen centered mersh'>
             <div className='bg-[#1E293B66] aspect-square w-full rounded-full centered'>
               <div>
@@ -80,7 +82,7 @@ function App(): JSX.Element {
                 Contact
               </Link>
             </div>
-            <Button>
+            <Button onMouseOver={useHover}>
               <svg
                 width='36'
                 height='36'
