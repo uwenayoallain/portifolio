@@ -60,17 +60,17 @@ function Cursor(): JSX.Element {
     document.addEventListener("mousemove", (e) => handleCursorMove(e));
   }, []);
 
-  React.useEffect(() => {
-    const hoverableContainer = document.querySelectorAll(".cursor-hover");
-    hoverableContainer.forEach((container) => {
-      container.addEventListener("mouseenter", () =>
-        hideCursor(cursor.current!, cursorInner.current!)
-      );
-      container.addEventListener("mouseleave", () =>
-        showCursor(cursor.current!, cursorInner.current!)
-      );
-    });
-  });
+  // React.useEffect(() => {
+  //   const hoverableContainer = document.querySelectorAll(".cursor-hover");
+  //   hoverableContainer.forEach((container) => {
+  //     container.addEventListener("mouseenter", () =>
+  //       hideCursor(cursor.current!, cursorInner.current!)
+  //     );
+  //     container.addEventListener("mouseleave", () =>
+  //       showCursor(cursor.current!, cursorInner.current!)
+  //     );
+  //   });
+  // });
 
   // React.useEffect(() => {
   //   document.querySelectorAll(".button").forEach((button) => {
