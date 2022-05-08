@@ -61,27 +61,27 @@ function Cursor(): JSX.Element {
   }, []);
 
   React.useEffect(() => {
-    const links = document.querySelectorAll(".link");
-    links.forEach((link) => {
-      link.addEventListener("mouseenter", () =>
+    const hoverableContainer = document.querySelectorAll(".cursor-hover");
+    hoverableContainer.forEach((container) => {
+      container.addEventListener("mouseenter", () =>
         hideCursor(cursor.current!, cursorInner.current!)
       );
-      link.addEventListener("mouseleave", () =>
+      container.addEventListener("mouseleave", () =>
         showCursor(cursor.current!, cursorInner.current!)
       );
     });
   });
 
-  React.useEffect(() => {
-    document.querySelectorAll(".button").forEach((button) => {
-      button.addEventListener("mouseenter", () =>
-        hideCursor(cursor.current!, cursorInner.current!)
-      );
-      button.addEventListener("mouseleave", () =>
-        showCursor(cursor.current!, cursorInner.current!)
-      );
-    });
-  });
+  // React.useEffect(() => {
+  //   document.querySelectorAll(".button").forEach((button) => {
+  //     button.addEventListener("mouseenter", () =>
+  //       hideCursor(cursor.current!, cursorInner.current!)
+  //     );
+  //     button.addEventListener("mouseleave", () =>
+  //       showCursor(cursor.current!, cursorInner.current!)
+  //     );
+  //   });
+  // });
   return (
     <>
       <div

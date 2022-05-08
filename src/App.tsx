@@ -41,7 +41,7 @@ function App(): JSX.Element {
     <div className='app dark' ref={container}>
       <Cursor />
       {isLoading ? (
-        <div className='w-full h-screen bg-[#0F172A] centered'>
+        <div className='w-full h-screen bg-[#0F172A] centered cursor-hover'>
           <div className='w-2/5 h-screen centered mersh'>
             <div className='bg-[#1E293B66] aspect-square w-full rounded-full centered'>
               <div>
