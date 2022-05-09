@@ -1,8 +1,6 @@
 import "./styles/App.css";
 import React from "react";
-import gsap from "gsap";
 import { Link, Button } from "./components/link";
-import { randomInRange } from "./utils/utils";
 import image from "./images/yarison.png";
 import Loader from "./components/Loader";
 
@@ -64,7 +62,6 @@ function App(): JSX.Element {
                   based in Rwanda 🇷🇼.currently learning new web technologies and
                   building awesome web applications.
                 </p>
-                <div className='absolute'></div>
                 <a className='absolute bottom-1 left-5 group' href='#scroll'>
                   <svg
                     width='16'
@@ -87,7 +84,11 @@ function App(): JSX.Element {
             <div className='w-1/2 h-full flex items-center flex-wrap mershed-background relative'>
               <div className='overlay' />
               <div className='w-1/2 m-auto z-10'>
-                <img src={image} alt={"Yarison | alain's face"} className="rounded-full" />
+                <img
+                  src={image}
+                  alt={"Yarison | alain's face"}
+                  className='rounded-full'
+                />
               </div>
             </div>
           </div>
@@ -102,7 +103,7 @@ function App(): JSX.Element {
                 and I also help out businesses to build their own websites.{" "}
               </h1>
             </div>
-            <div className='w-1/2 p-2 bg-red-700'></div>
+            <div className='w-1/2 p-2 bg-red-700' />
           </div>
         </div>
       </div>
