@@ -15,7 +15,6 @@ export default function Loader({
 }): JSX.Element {
   const loader = React.useRef<HTMLDivElement>(null);
   const [isLoading, setLoading] = React.useState(true);
-
   /**
    * @function handleLoad, a function to handle the load event
    * @returns {void}
@@ -39,7 +38,7 @@ export default function Loader({
       },
     });
     return () => window.removeEventListener("load", handleLoading);
-  }, []);
+  }, [loader, container]);
   return (
     <>
       {isLoading ? (
@@ -53,10 +52,12 @@ export default function Loader({
                     <p className='py-2 text-center text-white'>loading</p>
                     <div className='relative w-full h-2.5 rounded-full bg-slate-900'>
                       <div
-                        className=' w-0 h-2.5 rounded-full bg-slate-50'
+                        className=' w-0 h-2.5 rounded-full bg-slate-50 loader'
                         ref={loader}
                       />
-                      <p className='text-center text-white'>10%</p>
+                      <p className='text-center text-orange-500'>
+                        uwenayoallain
+                      </p>
                     </div>
                   </div>
                 </div>
