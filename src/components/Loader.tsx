@@ -34,8 +34,8 @@ export default function Loader({
       duration: 5,
       ease: "power3.easeOut",
       onComplete: () => {
-        setLoading(false);
         container.current?.classList.remove("dark");
+        setLoading(false);
       },
     });
     return () => window.removeEventListener("load", handleLoading);
@@ -45,7 +45,7 @@ export default function Loader({
       {isLoading ? (
         <div className='w-full h-screen bg-[#0F172A] centered cursor-hover'>
           <div className='w-2/5 h-screen centered mersh relative'>
-            <div className='overlay' />
+            <div className='dark_overlay' />
             <div className='bg-[#1E293B66] aspect-square w-full rounded-full centered z-10'>
               <div>
                 <h1 className='text-white text-9xl white'>Yarison...</h1>
