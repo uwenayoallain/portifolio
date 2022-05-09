@@ -1,6 +1,7 @@
 import React from "react";
 import gsap from "gsap";
 import { randomInRange } from "../utils/utils";
+import { name } from "../components/Names";
 
 /**
  *
@@ -55,8 +56,11 @@ export default function Loader({
                         className=' w-0 h-2.5 rounded-full bg-slate-50 loader'
                         ref={loader}
                       />
-                      <p className='text-center text-orange-500'>
-                        uwenayoallain
+                      <p className='text-center text-white'>
+                        <span className='text-orange-600 italic mr-2'>
+                          {name}
+                        </span>
+                        is on of my names
                       </p>
                     </div>
                   </div>

@@ -58,21 +58,13 @@ function App(): JSX.Element {
                 </h1>
                 <p className='text-center text-lg w-4/6 my-4 mx-auto'>
                   I am a Web{" "}
-                  <span className='text-[#3730A3] italic'>
+                  <span className='text-[#3730A3] mr-2 italic'>
                     Developer & UX/UI Designer
                   </span>
-                  {"  "}
                   based in Rwanda 🇷🇼.currently learning new web technologies and
                   building awesome web applications.
                 </p>
-                <div className='w-max mx-auto'>
-                  <Button>View CV</Button>
-                </div>
-                <div className='absolute'>
-                  <Button c='aspect-auto rounded-l-none pl-0 !p-6'>
-                    Available for Work
-                  </Button>
-                </div>
+                <div className='absolute'></div>
                 <div className='absolute bottom-1 left-5'>
                   <svg
                     width='16'
