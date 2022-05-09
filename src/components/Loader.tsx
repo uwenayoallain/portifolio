@@ -46,7 +46,7 @@ export default function Loader({
         <div className='w-full h-screen bg-[#0F172A] centered cursor-hover'>
           <div className='w-2/5 h-screen centered mersh relative'>
             <div className='overlay' />
-            <div className='bg-[#1E293B66] aspect-square w-full rounded-full centered'>
+            <div className='bg-[#1E293B66] aspect-square w-full rounded-full centered z-10'>
               <div>
                 <h1 className='text-white text-9xl white'>Yarison...</h1>
                 <div className='w-3/4 m-auto'>

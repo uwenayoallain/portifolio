@@ -84,10 +84,10 @@ function App(): JSX.Element {
                 </a>
               </div>
             </div>
-            <div className='w-1/2 h-full flex items-center flex-wrap mershed-background'>
+            <div className='w-1/2 h-full flex items-center flex-wrap mershed-background relative'>
               <div className='overlay' />
-              <div className='w-1/2 m-auto'>
-                <img src={image} alt={"Yarison | alain's face"} />
+              <div className='w-1/2 m-auto z-10'>
+                <img src={image} alt={"Yarison | alain's face"} className="rounded-full" />
               </div>
             </div>
           </div>
