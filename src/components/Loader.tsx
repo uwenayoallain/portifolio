@@ -1,7 +1,7 @@
 import React from "react";
 import gsap from "gsap";
 import { randomInRange } from "../utils/utils";
-import { name } from "../components/Names";
+import { name } from "./names";
 
 /**
  *

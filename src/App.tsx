@@ -1,8 +1,9 @@
 import "./styles/App.css";
 import React from "react";
-import { Link, Button } from "./components/link";
+import Link from "./components/link";
+import Button from "./components/button";
 import image from "./images/yarison.png";
-import Loader from "./components/Loader";
+import Loader from "./components/loader";
 
 /**
  * @component App, the main component
