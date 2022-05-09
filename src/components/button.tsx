@@ -7,7 +7,7 @@ import React from "react";
  */
 function Button({
   children,
-  c = "button",
+  c = " ",
   ...props
 }: {
   children: React.ReactNode;
