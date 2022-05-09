@@ -1,3 +1,4 @@
+import React from "react";
 /**
  * @component Button, custom buttons
  * @param children , the text to display in the button,
@@ -6,7 +7,7 @@
  */
 function Button({
   children,
-  c = " ",
+  c = "button",
   ...props
 }: {
   children: React.ReactNode;
