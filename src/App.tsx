@@ -65,12 +65,12 @@ function App(): JSX.Element {
                   building awesome web applications.
                 </p>
                 <div className='absolute'></div>
-                <div className='absolute bottom-1 left-5'>
+                <a className='absolute bottom-1 left-5 group' href='#scroll'>
                   <svg
                     width='16'
                     height='55'
                     viewBox='0 0 16 55'
-                    className='inline-block'
+                    className='inline-block transition'
                     fill='none'
                     xmlns='http://www.w3.org/2000/svg'>
                     <path
@@ -78,11 +78,14 @@ function App(): JSX.Element {
                       className='fill-slate-900'
                     />
                   </svg>
-                  <p className='inline-block'>Scroll down</p>
-                </div>
+                  <p className='inline-block group-hover:italic transition'>
+                    Scroll down
+                  </p>
+                </a>
               </div>
             </div>
             <div className='w-1/2 h-full flex items-center flex-wrap mershed-background'>
+              <div className='overlay' />
               <div className='w-1/2 m-auto'>
                 <img src={image} alt={"Yarison | alain's face"} />
               </div>
