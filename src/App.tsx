@@ -76,8 +76,8 @@ function App(): JSX.Element {
                       className='fill-slate-900'
                     />
                   </svg>
-                  <p className='inline-block group-hover:italic transition'>
-                    Scroll down
+                  <p className='inline-block group-hover:animate-italic transition'>
+                    Scroll
                   </p>
                 </a>
               </div>
