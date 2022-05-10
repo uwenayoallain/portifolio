@@ -71,7 +71,7 @@ function App(): JSX.Element {
                       width='16'
                       height='55'
                       viewBox='0 0 16 55'
-                      className='inline-block transition'
+                      className='inline-block transition group-hover:animate-hover'
                       fill='none'
                       xmlns='http://www.w3.org/2000/svg'>
                       <path
