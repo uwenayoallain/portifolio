@@ -11,8 +11,10 @@ import { name } from "./names";
 
 export default function Loader({
   container,
+  setState,
 }: {
   container: React.RefObject<HTMLDivElement>;
+  setState: Function;
 }): JSX.Element {
   const loader = React.useRef<HTMLDivElement>(null);
   const [isLoading, setLoading] = React.useState(true);
@@ -24,6 +26,7 @@ export default function Loader({
   const handleLoading = (): void => {
     setTimeout(() => {
       setLoading(false);
+      setState(isLoading);
     }, randomInRange(3000, 5000));
   };
 
@@ -43,7 +46,7 @@ export default function Loader({
   return (
     <>
       {isLoading ? (
-        <div className='w-full h-screen bg-[#0F172A] centered cursor-hover'>
+        <div className='w-full h-screen bg-[#0F172A] centered cursor-hover fixed z-50 top-0'>
           <div className='w-2/5 h-screen centered mersh relative'>
             <div className='dark_overlay' />
             <div className='bg-[#1E293B66] aspect-square w-full rounded-full centered z-10'>
