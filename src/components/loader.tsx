@@ -18,6 +18,7 @@ export default function Loader({
   setState: Function;
 }): JSX.Element {
   const loader = React.useRef<HTMLDivElement>(null);
+  const cursorContainer = React.useRef<HTMLDivElement>(null);
   const [isLoading, setLoading] = React.useState(true);
   /**
    * @function handleLoad, a function to handle the load event
@@ -47,8 +48,10 @@ export default function Loader({
   return (
     <>
       {isLoading ? (
-        <div className='w-full h-screen bg-[#0F172A] centered cursor-hover fixed z-50 top-0'>
-          <Cursor />
+        <div
+          className='w-full h-screen bg-[#0F172A] centered cursor-hover z-50 top-0 fixed'
+          ref={cursorContainer}>
+          <Cursor container={container} />
           <div className='w-2/5 h-screen centered mersh relative'>
             <div className='dark_overlay' />
             <div className='bg-[#1E293B66] aspect-square w-full rounded-full centered z-10'>
