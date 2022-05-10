@@ -2,6 +2,7 @@ import React from "react";
 import gsap from "gsap";
 import { randomInRange } from "../utils/utils";
 import { name } from "./names";
+import Cursor from "./cursor";
 
 /**
  *
@@ -47,6 +48,7 @@ export default function Loader({
     <>
       {isLoading ? (
         <div className='w-full h-screen bg-[#0F172A] centered cursor-hover fixed z-50 top-0'>
+          <Cursor />
           <div className='w-2/5 h-screen centered mersh relative'>
             <div className='dark_overlay' />
             <div className='bg-[#1E293B66] aspect-square w-full rounded-full centered z-10'>
