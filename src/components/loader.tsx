@@ -42,7 +42,6 @@ export default function Loader({
   }, [loader, container]);
   return (
     <>
-      // display on loader
       {isLoading ? (
         <div className='w-full h-screen bg-[#0F172A] centered cursor-hover'>
           <div className='w-2/5 h-screen centered mersh relative'>
