@@ -1,9 +1,10 @@
 const names = [
   "uwenayoallain",
   "yarison",
-  "pacifique",
   "uwenayo",
+  "pacifique",
   "allain",
+  "uap",
   "not_yarison",
 ];
 
