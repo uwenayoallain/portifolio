@@ -12,7 +12,6 @@ export default function Cursor({
     container.current?.addEventListener("mousemove", (e: MouseEvent) => {
       const mouseX = e.clientX;
       const mouseY = e.clientY;
-      console.log(mouseX, mouseY);
     });
   });
   return (
