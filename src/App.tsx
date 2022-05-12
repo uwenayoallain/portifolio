@@ -97,7 +97,7 @@ function App(): JSX.Element {
               </div>
             </div>
             <div className='flex flex-wrap'>
-              <div className='w-1/2 pl-10 p-2'>
+              <div className='w-full pl-10 p-2'>
                 <h2 className='text-[#3730A3] text-lg font-[Pally-Bold]'>
                   Services
                 </h2>
@@ -108,7 +108,6 @@ function App(): JSX.Element {
                   own websites.{" "}
                 </h1>
               </div>
-              <div className='w-1/2 p-2 bg-red-700' />
             </div>
           </div>
         </div>
