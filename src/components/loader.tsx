@@ -51,7 +51,7 @@ export default function Loader({
         <div
           className='w-full h-screen bg-[#0F172A] centered cursor-hover z-50 top-0 fixed'
           ref={cursorContainer}>
-          <Cursor container={container} />
+          {/* <Cursor container={container} /> */}
           <div className='w-2/5 h-screen centered mersh relative'>
             <div className='dark_overlay' />
             <div className='bg-[#1E293B66] aspect-square w-full rounded-full centered z-10'>
