@@ -109,7 +109,14 @@ function App(): JSX.Element {
                 </h1>
               </div>
             </div>
-            <div className='flex flex-wrap'></div>
+            <div className='flex flex-wrap'>
+              <div className='w-full pl-10 p-2'>
+                <h2 className='text-[#3730A3] text-lg font-[Pally-Bold]'>
+                  About
+                </h2>
+                <h1 className='text-6xl font-[Pally-Bold]'>I am a Rwandan</h1>
+              </div>
+            </div>
           </div>
         </div>
       )}
