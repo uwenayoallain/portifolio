@@ -109,6 +109,7 @@ function App(): JSX.Element {
                 </h1>
               </div>
             </div>
+            <div className='flex flex-wrap'></div>
           </div>
         </div>
       )}
