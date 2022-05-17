@@ -110,6 +110,7 @@ function App(): JSX.Element {
               </div>
             </div>
             <div className='flex flex-wrap'>
+              this is just for a commit
               <div className='w-full pl-10 p-2'>
                 <h2 className='text-[#3730A3] text-lg font-[Pally-Bold]'>
                   About
